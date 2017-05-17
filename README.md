@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
 
+## Lazy loaded feature module example
+
+The lazy loaded feature module is `OrdersModule`. The `AppRoutingModule` imports the `OrdersRoutingModule` which in turn has a route to the `OrdersListComponent`. 
+
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
