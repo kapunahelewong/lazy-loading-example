@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomerLookupComponent } from './customer-lookup/customer-lookup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-// lazy loaded feature module
-import { OrdersRoutingModule } from './orders/orders-routing.module';
+// import { OrdersModule } from './orders/orders.module';
 
 
 const routes: Routes = [
@@ -15,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'orders',
-    loadChildren: 'orders/orders-routing.module#OrdersRoutingModule'
+    loadChildren: './orders/orders.module#OrdersModule'
   },
   {
     path: '',
@@ -30,10 +29,11 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
-    OrdersRoutingModule
+    RouterModule.forRoot(routes)
   ],
-  exports: [RouterModule],
+  exports: [
+    RouterModule
+  ],
   providers: []
 })
 export class AppRoutingModule { }

@@ -6,7 +6,7 @@ import { OrderListComponent } from './order-list/order-list.component';
 
 const routes: Routes = [
   {
-    path: 'orders',
+    path: '',
     component: OrderListComponent
   }
 ];
@@ -16,8 +16,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes)
   ],
-  declarations: [
-    OrderListComponent,
+  exports: [
+    RouterModule
   ]
 })
 export class OrdersRoutingModule { }

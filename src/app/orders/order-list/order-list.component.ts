@@ -10,6 +10,7 @@ export class OrderListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('lazy loaded module');
   }
 
 }
